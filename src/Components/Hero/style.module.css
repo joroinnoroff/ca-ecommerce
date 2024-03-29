@@ -34,9 +34,15 @@ a {
 }
 
 @media (max-width:900px) {
+
+  .Hero {
+    width: 60%;
+    margin: auto;
+  }
+
   .Button {
-    left: 0%;
-    right: 0;
+    position: sticky;
+    margin-top: 3rem;
   }
 
 

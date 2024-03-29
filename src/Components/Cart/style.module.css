@@ -107,3 +107,9 @@
 
   }
 }
+
+@media (max-width:600px) {
+  .CartContainer {
+    width: auto;
+  }
+}

@@ -3,6 +3,9 @@
   min-height: 100vh;
 
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .curve {
@@ -52,25 +55,23 @@ span {
   color: #fff;
 }
 
+
+
 .Products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* Three columns with equal width */
   gap: 20px;
-  /* Gap between grid items */
-  position: absolute;
-  z-index: 9;
 }
 
 .Product {
   width: 100%;
-  /* Each product takes the full width of its grid cell */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   height: auto;
 }
+
 
 .Products img {
   width: 400px;
@@ -104,7 +105,7 @@ h3 {
 
 .Button {
   width: 55%;
-  font-size: 1vw;
+  font-size: 2vw;
   margin: auto;
   height: 300px;
 }
@@ -145,12 +146,18 @@ h3 {
 
   .BackgroundAnimation {
 
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     width: 100%;
-    top: 45%;
+    top: 55%;
     right: 0%;
     text-indent: 1rem;
+
+  }
+
+  .Button {
+
+    font-size: 3vw;
 
   }
 }
