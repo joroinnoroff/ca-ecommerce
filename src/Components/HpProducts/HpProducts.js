@@ -18,8 +18,11 @@ export default function HpProducts() {
     setLoading(true); // Set loading to true when starting to fetch products
   
     const fetchProducts = async () => {
+
+      const url = process.env.REACT_APP_API_URL
+      const endpoint = '/online-shop';
       try {
-        const response = await fetch("https://v2.api.noroff.dev/online-shop");
+        const response = await fetch(url + endpoint);
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }

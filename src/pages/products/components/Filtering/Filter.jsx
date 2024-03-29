@@ -1,13 +1,13 @@
-// FilterItems.js
+
 import React from "react";
 import style from './style.module.css';
 import RoundedButton from "../../../../Components/common/RoundedButton/RoundedButton";
-import { useAnimation } from "framer-motion";
+
 
 
 export default function FilterItems({ onTagSelect, onSearchQueryChange }) {
 
-  const controls = useAnimation();
+
   const handleTagSelect = (tag) => {
     console.log("Selected tag:", tag); // Log the selected tag
     onTagSelect(tag);

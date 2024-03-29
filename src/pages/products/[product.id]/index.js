@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import style from './styles/style.module.css';
 import { useParams } from 'react-router-dom';
 import RoundedButton from '../../../Components/common/RoundedButton/RoundedButton';
-import ProductReviews from './components/ProductReviews/ProductReviews'; // Import ProductReviews component
+import ProductReviews from './components/ProductReviews/ProductReviews';  
 import Lottie from 'lottie-react'
 import Loading from '../../../animations/Loadingskeleton.json'
 import { toast, Toaster } from 'sonner';
@@ -14,9 +14,10 @@ function ProductDetails({ addItemToCart }) {
 
   useEffect(() => {
     const fetchProduct = async () => {
+      const url = process.env.REACT_APP_API_URL;
+      const endpoint = '/online-shop/';
       try {
-        const url = `https://v2.api.noroff.dev/online-shop/${id}`;
-        const response = await fetch(url);
+        const response = await fetch(`${url}${endpoint}${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch product');
         }
@@ -28,9 +29,10 @@ function ProductDetails({ addItemToCart }) {
         setIsLoading(false);
       }
     };
-
+  
     fetchProduct();
   }, [id]);
+  
 
   const handleAddToCart = () => {
     if (product && product.data) {
@@ -42,7 +44,7 @@ function ProductDetails({ addItemToCart }) {
   };
 
   if (isLoading) {
-    return <div>              <Lottie animationData={Loading} width={20} height={20} style={{height: "600px", width: "auto", overflow: "auto"}}/></div>;
+    return <div> <Lottie animationData={Loading} width={20} height={20} style={{height: "600px", width: "auto", overflow: "auto"}}/></div>;
   }
 
   if (!product || !product.data) {

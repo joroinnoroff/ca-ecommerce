@@ -9,10 +9,10 @@ import FilterItems from './products/components/Filtering/Filter';
 import { Skeleton } from '../Components/ui/skeleton';
 import { XIcon } from 'lucide-react';
 
-const apiUrl = process.env.REACT_APP_API_URL;
+ 
 const words = "Everything:";
 
-export default function AllProducts({ addItemToCart }) {
+export default function AllProducts({ }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filteredTag, setFilteredTag] = useState(null);
@@ -24,8 +24,10 @@ export default function AllProducts({ addItemToCart }) {
 
   useEffect(() => {
     const fetchProducts = async () => {
+      const url = process.env.REACT_APP_API_URL
+      const endpoint = '/online-shop';
       try {
-        const response = await fetch("https://v2.api.noroff.dev/online-shop");
+        const response = await fetch(url + endpoint);
         if (!response.ok) {
           throw new Error('Failed to fetch products');
         }

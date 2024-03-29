@@ -1,5 +1,5 @@
 import {  Info, Mail, MapIcon, MinusIcon, PlusIcon } from 'lucide-react';
-import React, { useState } from 'react';
+import React from 'react';
 import RoundedButton from '../Components/common/RoundedButton/RoundedButton';
 import style from './CheckOutStyle/style.module.css';
 import { Link } from 'react-router-dom';
@@ -8,8 +8,7 @@ function CheckOut({ cartItems, removeFromCart, addItemToCart }) {
  
 
 
-  const [checkOut, setCheckout] = useState(false);
-  
+ 
 
   const totalPrice = cartItems.reduce((total, item) => {
     // If there's a discounted price, use that; otherwise, use regular price
