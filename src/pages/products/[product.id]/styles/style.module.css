@@ -1,0 +1,48 @@
+.ProductContainer {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.Old {
+  text-decoration: line-through;
+  color: rgb(143, 143, 143) !important;
+}
+
+
+.ProductContainer img {
+  width: 500px;
+  border-radius: 10%;
+}
+
+.ProductContainer h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+}
+
+.Description {
+  width: 85%;
+}
+
+@media (max-width: 1024px) {
+  .ProductContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+
+
+}
+
+
+@media (max-width: 768px) {
+
+
+
+  .ProductContainer img {
+    width: 300px;
+  }
+}

@@ -1,0 +1,156 @@
+.Container {
+  margin-top: 45vh;
+  min-height: 100vh;
+
+
+}
+
+.curve {
+  fill: #ccc;
+
+}
+
+.BackgroundAnimation {
+
+  font-size: 10rem;
+  position: absolute;
+  width: 100%;
+  top: 35%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: visible;
+  text-indent: 2rem;
+
+}
+
+
+
+
+.Container svg {
+  fill: currentColor;
+  fill: #fff;
+  max-width: 66vmin;
+  transform-origin: center;
+  width: 66%;
+}
+
+.Container textPath {
+  line-height: 0.5rem;
+}
+
+
+
+.Products p,
+h1,
+h3,
+span {
+  color: #fff;
+}
+
+.Products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Three columns with equal width */
+  gap: 20px;
+  /* Gap between grid items */
+  position: absolute;
+  z-index: 9;
+}
+
+.Product {
+  width: 100%;
+  /* Each product takes the full width of its grid cell */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: auto;
+}
+
+.Products img {
+  width: 400px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.Old {
+  text-decoration: line-through;
+  color: rgb(143, 143, 143) !important;
+}
+
+h2 {
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+h3 {
+  width: 60%;
+  margin: auto;
+  margin-top: .5rem;
+}
+
+.Loader {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Button {
+  width: 55%;
+  font-size: 1vw;
+  margin: auto;
+  height: 300px;
+}
+
+
+
+
+
+
+/* Media query for 1500px */
+@media (max-width: 1500px) {
+  .Products {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns at 1500px */
+  }
+
+  .BackgroundAnimation {
+
+    font-size: 5rem;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    right: 0%;
+
+  }
+}
+
+/* Media query for 900px */
+@media (max-width: 900px) {
+  .Products {
+    grid-template-columns: repeat(1, 1fr);
+    /* One column at 900px */
+  }
+
+  .Products img {
+    width: 350px;
+  }
+
+  .BackgroundAnimation {
+
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    top: 45%;
+    right: 0%;
+    text-indent: 1rem;
+
+  }
+}

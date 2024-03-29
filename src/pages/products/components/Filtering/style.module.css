@@ -1,0 +1,35 @@
+ .Container {
+   margin-top: 1rem;
+ }
+
+ .FilterContainer {
+   width: 45%;
+   margin-bottom: 1rem;
+   margin-top: 1rem;
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+ }
+
+ .Search input {
+   border: 0.5px solid;
+   background-color: rgb(116, 116, 116);
+   color: #ccc;
+ }
+
+
+
+ .FilterContainer p {
+   font-size: 0.75rem;
+   color: #fff;
+ }
+
+ @media (max-width:600px) {
+   .Container {
+     width: 30%;
+   }
+
+   .FilterContainer {
+     gap: 0.25rem;
+   }
+ }

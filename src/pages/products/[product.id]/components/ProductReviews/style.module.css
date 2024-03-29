@@ -1,0 +1,23 @@
+.Reviews {
+  padding: 4rem;
+}
+
+
+.Reviews h2 {
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Reviews p {
+  color: #fff;
+}
+
+.UserIcon {
+  height: 10px;
+  width: 10px;
+  background: #000;
+  display: block;
+  border-radius: 50%;
+}

@@ -1,0 +1,46 @@
+.Hero {
+  width: 100%;
+  height: 100%;
+}
+
+.Hero img {
+  border-radius: 5%;
+  width: 700px;
+  height: 358px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#W:hover {
+  color: #fff;
+}
+
+.Button {
+
+  font-size: 1.5vw;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  left: 42%;
+  top: 25%;
+}
+
+@media (max-width:900px) {
+  .Button {
+    left: 0%;
+    right: 0;
+  }
+
+
+  .Hero p {
+    font-size: 1rem;
+  }
+}

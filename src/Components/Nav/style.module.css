@@ -1,0 +1,39 @@
+.Nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 4rem;
+
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.Logo {
+  font-weight: 800;
+  font-size: 3rem;
+
+  width: 40%;
+}
+
+.Nav span {
+  color: rgb(58, 146, 222);
+}
+
+
+.Cart {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+@media (max-width:600px) {
+  .Logo {
+    font-size: 1.25rem;
+  }
+
+  .Cart {
+    right: 0;
+  }
+}

@@ -1,0 +1,206 @@
+.Container {
+  margin-top: 25vh;
+  min-height: 100vh;
+
+
+}
+
+.curve {
+  fill: #ccc;
+  /* Set the fill color for the text */
+}
+
+.BackgroundAnimation {
+
+  font-size: 6rem;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  right: 10%;
+  /* Set width to 100% */
+  display: flex;
+  /* Use flexbox for centering */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  overflow: hidden;
+  text-indent: 0.75rem;
+  /* Hide overflow */
+}
+
+.BackgroundAnimation span {
+  text-transform: capitalize;
+}
+
+
+
+.Container svg {
+  fill: currentColor;
+  fill: #fff;
+  max-width: 66vmin;
+  transform-origin: center;
+  width: 66%;
+}
+
+.Container textPath {
+  line-height: 0.5rem;
+}
+
+.Products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Three columns with equal width */
+  gap: 30px;
+
+  /* Gap between grid items */
+  position: absolute;
+  z-index: 9;
+}
+
+.Product {
+  width: 100%;
+  /* Each product takes the full width of its grid cell */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  /* Set height to 100% */
+  padding: 30px;
+  /* Add padding for spacing */
+  box-sizing: border-box;
+  /* Include padding in the width */
+}
+
+.Products p,
+h1,
+h3,
+span {
+  color: #fff;
+}
+
+
+
+.Products img {
+  width: 400px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.Old {
+  text-decoration: line-through;
+  color: rgb(143, 143, 143) !important;
+}
+
+h2 {
+  font-weight: 200;
+  text-decoration: underline;
+}
+
+h3 {
+  width: 60%;
+  margin: auto;
+  margin-top: .5rem;
+}
+
+.Products a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Product h1 {
+  margin-top: 0.75rem;
+}
+
+.Loader {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.LoadingTitle {
+  position: absolute;
+  top: 16%;
+  height: 39px;
+  width: 550px;
+  left: 20%;
+}
+
+
+.Button {
+  width: 100%;
+
+  max-width: 200px;
+
+  font-size: 1rem;
+  margin: auto;
+  margin-top: .75rem;
+}
+
+.FilterButtons {
+  display: flex;
+  align-items: center;
+
+  width: 50%;
+  margin: auto;
+}
+
+
+
+/* Media query for 1500px */
+@media (max-width: 1500px) {
+  .Products {
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns at 1500px */
+  }
+
+  .BackgroundAnimation {
+
+    font-size: 5rem;
+    position: absolute;
+    width: 100%;
+
+    right: 10%;
+
+  }
+}
+
+/* Media query for 900px */
+@media (max-width: 900px) {
+  .Products {
+    grid-template-columns: repeat(1, 1fr);
+    /* One column at 900px */
+  }
+
+  .Products img {
+    width: 350px;
+  }
+
+  .BackgroundAnimation {
+
+    font-size: 1.5rem;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-indent: 1rem;
+
+  }
+
+  .ClearFilter {
+    position: absolute;
+    top: 33%;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .FilterButtons {
+
+
+    width: 95%;
+
+  }
+}

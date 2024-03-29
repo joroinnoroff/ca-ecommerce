@@ -1,0 +1,229 @@
+.Container {
+
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+
+  padding: 5rem;
+
+}
+
+.Container h1 {
+  font-size: 5vw;
+}
+
+
+
+.Container img {
+  width: 75px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.Container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 50%;
+  /* Adjust this width as needed */
+  align-items: flex-start;
+  position: absolute;
+  right: 0%;
+  padding: 4rem;
+  top: 13%;
+}
+
+.Container li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* Adjust alignment */
+  width: 100%;
+  /* Make all list items take full width */
+  gap: 5rem;
+  border-bottom: 0.5px solid #fff;
+  padding: 0.25rem;
+}
+
+
+
+.CheckForm {
+
+  width: 55%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.CheckForm h1 {
+  border-bottom: 0.5px solid;
+  font-size: 2vw;
+}
+
+.CheckForm p {
+  font-size: 1.25vw;
+}
+
+.Payment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.Payment img {
+  width: 80px;
+  height: auto;
+}
+
+.Button p {
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+.Counter {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+
+.Locate {
+  display: flex;
+  margin-top: 5rem;
+  color: #fff;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+}
+
+.Locate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Adjust the space between columns */
+  align-items: stretch;
+  /* Stretch columns to equal height */
+  height: 100%;
+  margin-top: 5rem;
+}
+
+.LocateCon {
+  flex: 1;
+  /* Each column takes equal space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* Center align text */
+}
+
+.LocateCon svg {
+  margin-bottom: 1rem;
+}
+
+.LocateCon h1 {
+  font-size: 0.75rem;
+  border-bottom: 1px solid;
+}
+
+.LocateCon p {
+  width: 90%;
+}
+
+@media (max-width:1200px) {
+
+  .Container {
+    display: flex;
+    padding: 0rem;
+    align-items: center;
+
+  }
+
+  .Button p {
+    font-size: 2.25vw;
+  }
+
+
+
+  .Container ul {
+    width: auto;
+    position: static;
+
+  }
+
+  .Container li {
+    gap: 3rem;
+    padding: 4rem;
+  }
+
+  .Container img {
+    width: 70px;
+  }
+
+
+  .CheckForm {
+    align-items: center;
+  }
+
+
+  .Locate {
+    width: 100%;
+  }
+
+  .Locate span {
+    font-size: 13px;
+    margin-bottom: 1rem;
+  }
+
+  .Locate p {
+    display: none;
+  }
+}
+
+@media (max-width:1024px) {
+
+
+
+
+  .Container img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10%;
+  }
+
+
+
+
+}
+
+@media (max-width:764px) {
+
+
+  .Container li {
+    width: 100%;
+    margin: auto;
+    padding: 0.25rem;
+    gap: 1rem;
+  }
+
+
+  .CheckForm h1 {
+    font-size: 1.5rem;
+  }
+
+  .Locate span {
+    font-size: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .locateCon h1 {
+    font-size: 6px;
+  }
+
+}
