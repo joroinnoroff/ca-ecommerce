@@ -63,11 +63,9 @@ function ShoppingCart({ cartItems, removeFromCart, addItemToCart }) {
         {isOpen && (
           <motion.div
             className={style.CartContainer}
-            initial={{ opacity: 0, y: -20, scale: 0.8 }} // Adjust initial properties for smoother opening
-            animate={{ opacity: 1, y: 0, scale: 1 }} // Keep the same animation properties for smooth transition
-            exit={{ opacity: 0, y: -20, scale: 0.8 }} // Adjust exit properties for smoother closing
-            transition={{ type: "spring", stiffness: 260, damping: 30 }} // Adjust transition type and parameters
-
+            initial={{ opacity: 0, x: 100, scale: 0.8 }} // Adjust initial properties for popping from right to left
+            animate={{ opacity: 1, x: 0, scale: 1, transition: { type: "spring", stiffness: 260, damping: 30, bounce: 0.25 } }} // Adjust animate properties for swinging animation
+            exit={{ opacity: 0, x: 100, scale: 0.8 }} // Adjust exit properties for smoother closing
           >
             <h2>Shopping Cart</h2>
             <p>Total Items: {totalItemsInCart}</p>

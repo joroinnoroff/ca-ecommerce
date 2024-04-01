@@ -75,7 +75,7 @@ function Contact() {
         damping: 10,
         stiffness: 100
       }}
-      className='flex items-center justify-center relative'
+      className='flex items-center justify-center absolute left-0 right-0'
     >
 
 <div className='flex flex-col items-center'>
