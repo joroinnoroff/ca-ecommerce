@@ -79,17 +79,17 @@ function Contact() {
     >
 
 <div className='flex flex-col items-center'>
-        <div className='flex flex-col items-center mb-20 absolute top-[20%] z-9 p-10'>
+        <div className='flex flex-col items-center mb-20 absolute   z-9 p-10'>
           <h1 className='text-[12vw] md:text-[8vw] mb-20'>Contact <span className='text-[#3A92DE]'>us</span> here</h1>
  
     <span className='text-sm md:text-lg text-gray-700' key="phrase2">
       Send en email here. Choose a subject if you wanna reach the different departments
     </span>
 
-          <div className='Contact-Form mt-10  flex flex-col w-full md:flex-row gap-20 xl:gap-52 mb-10 md:p-8 justify-between '  >
+          <div className='Contact-Form mt-10  flex flex-col md:flex-row gap-20 xl:gap-52 mb-10 md:p-8 justify-between '  >
 
           <form
-  className={`flex items-center w-full m-auto ${style.Form}`}
+  className={`flex items-center w-full h-full m-auto ${style.Form}`}
   autoComplete='off'
   onSubmit={handleSubmit}
 >
@@ -164,7 +164,7 @@ function Contact() {
       <div className="lg:w-3/6">
         <button type='submit'>
           <RoundedButton backgroundColor={"#FFF"}>
-            <p type="submit" className='font-bold px-2 py-4' id='Send'>Send it</p>
+            <p type="submit" className='font-bold text-white px-2 py-4' id='Send'>Send it</p>
           </RoundedButton>
         </button>
       </div>
