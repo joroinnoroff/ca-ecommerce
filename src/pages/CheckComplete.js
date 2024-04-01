@@ -35,11 +35,13 @@ function Complete({cartItems, setCartItems}) {
           <li key={index}>
             <span>{item.productData.title}</span>
             <div>
-              <div>
-                ${item.productData.discountPrice
-                  ? item.productData.discountPrice
-                  : item.productData.price}
-              </div>
+            <span>
+                {item.productData.discountedPrice ? (
+      <span> {item.productData.discountedPrice}</span>
+    ) : (
+      <span>{item.productData.price}</span>
+    )}
+                </span>
             </div>
             <span>Quantity: {item.quantity}</span>
 

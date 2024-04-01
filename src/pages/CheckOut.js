@@ -15,7 +15,6 @@ function CheckOut({ cartItems, removeFromCart, addItemToCart }) {
     const price = item.productData.discountPrice || item.productData.price;
     return total + price * item.quantity;
   }, 0).toFixed(2); // <-- Add toFixed(2) to round to 2 decimal places
-  
 
   const totalItemsInCart = cartItems.reduce((total, item) => {
     return total + item.quantity;
@@ -49,13 +48,13 @@ function CheckOut({ cartItems, removeFromCart, addItemToCart }) {
             {cartItems.map((item, index) => (
               <li key={index}>
                 <span>{item.productData.title}</span>
-                <div>
-                  <div>
-                    ${item.productData.discountPrice
-                      ? item.productData.discountPrice
-                      : item.productData.price}
-                  </div>
-                </div>
+                <span>
+                {item.productData.discountedPrice ? (
+      <span> {item.productData.discountedPrice}</span>
+    ) : (
+      <span>{item.productData.price}</span>
+    )}
+                </span>
                 <span>Quantity: {item.quantity}</span>
 
                 <div className={style.Counter}>

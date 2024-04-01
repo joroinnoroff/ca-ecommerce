@@ -26,7 +26,7 @@ function ShoppingCart({ cartItems, removeFromCart, addItemToCart }) {
 
   const totalPrice = cartItems.reduce((total, item) => {
     // If there's a discounted price, use that; otherwise, use regular price
-    const price = item.productData.discountPrice || item.productData.price;
+    const price = item.productData.discountPrice ? item.productData.discountPrice : item.productData.price;
     return total + price * item.quantity;
   }, 0).toFixed(2); // <-- Add toFixed(2) to round to 2 decimal places
 
@@ -85,7 +85,12 @@ function ShoppingCart({ cartItems, removeFromCart, addItemToCart }) {
                     <MinusIcon onClick={() => handleRemoveItem(index)} className="" />
                   </div>
                   <span>{item.productData.title}</span>
-                  <span>${item.productData.discountedPrice}</span>
+                  {/* Render discountedPrice if it exists, otherwise render price */}
+                  {item.productData.discountedPrice ? (
+                    <h1> {item.productData.discountedPrice}</h1>
+                  ) : (
+                    <h1> {item.productData.price}</h1>
+                  )}
                   <span>Quantity: {item.quantity}</span>
                   <Link to={`/products/${item.productId}`} onClick={toggleCart}>
                     {item.productData.image && item.productData.image.url && (
@@ -95,8 +100,13 @@ function ShoppingCart({ cartItems, removeFromCart, addItemToCart }) {
                 </motion.li>
               ))}
 
+
+
+
+
               <span>Free shipping</span>
-              <span className={style.Total}>Cart total: {totalPrice}</span>
+              <span>Cart total: ${totalPrice}</span>
+
               <Link to="/CheckOut" onClick={toggleCart}>
                 <RoundedButton backgroundColor='#fff'>
                   <p>Go to checkout</p>

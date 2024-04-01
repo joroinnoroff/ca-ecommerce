@@ -52,7 +52,8 @@
   grid-template-columns: repeat(3, 1fr);
   /* Three columns with equal width */
   gap: 30px;
-
+  left: 0;
+  right: 0;
   /* Gap between grid items */
   position: absolute;
   z-index: 9;
@@ -164,7 +165,7 @@ h3 {
     position: absolute;
     width: 100%;
 
-    right: 10%;
+    right: 25%;
 
   }
 }
@@ -181,11 +182,12 @@ h3 {
   }
 
   .BackgroundAnimation {
-
+    top: 45%;
+    right: 3%;
     font-size: 1.5rem;
     position: absolute;
     width: 100%;
-    top: 50%;
+
     text-indent: 1rem;
 
   }
