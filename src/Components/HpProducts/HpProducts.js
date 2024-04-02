@@ -98,7 +98,7 @@ export default function HpProducts() {
       ) : (
         <div className={style.Products}>
           {products.slice(0, 6).map((product, index) => (
-            <Link to={`/products/${product.id}`}>
+            <Link to={`/products/${product.id}`} key={product.id}>
             <motion.div 
               key={product.id} 
               className={style.Product}
@@ -112,9 +112,14 @@ export default function HpProducts() {
             >
                   <img src={product.image.url} alt={product.title} />
                   <h3>{product.description}</h3>
-                  <p className={style.Old}>Price: ${product.price}</p>
-                  <span>New Price</span>
-                  <h2>${product.discountedPrice}</h2>
+                  {product.discountedPrice && product.discountedPrice < product.price ? (
+    <>
+        <p className={style.Old}>Price: {product.price}</p>
+        <h1>New Price: {product.discountedPrice}</h1>
+    </>
+) : (
+    <h1>Price: {product.price}</h1>
+)}
                   <div className={style.Button}>
                     <div>
                       <RoundedButton 

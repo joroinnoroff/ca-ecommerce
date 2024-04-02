@@ -131,18 +131,18 @@ export default function AllProducts({ }) {
     <motion.div ref={containerRef} className={style.Container}>
       {loading ? (
         <div className={style.Loader}>
-          <div className=' absolute top-[15%] left-[29%]'>
-            <Skeleton className="bg-gray-400 h-12 w-[20rem] xl:w-[26rem]"/>
+          <div className=' absolute md:top-[37%] top-[45%] md:right-[3%] xl:left-[27%] md:left-[20%]   left-[3%]'>
+            <Skeleton className="bg-gray-400 h-10 w-[20rem] xl:w-[26rem]"/>
  
           </div>
         <div className=''>
-        <Skeleton className="bg-gray-400 w-52 h-4 absolute top-[48%] left-[27%]"/>
-        <Skeleton className="bg-gray-400 w-52 h-4 absolute top-[46%] left-[27%]"/>
+        <Skeleton className="bg-gray-400 w-52 h-4 absolute lg:top-[48%] top-[68%] sm:left-[27%] left-[3%]"/>
+        <Skeleton className="bg-gray-400 w-52 h-4 absolute lg:top-[46%] top-[70%] sm:left-[27%] left-[3%]"/>
 
 
-        <Skeleton className="bg-gray-400 w-28 h-10 absolute top-[52%] left-[27%] rounded-full"/>
-        <Skeleton className="bg-gray-400 w-28 h-10 absolute top-[52%] left-[34%] rounded-full"/>
-        <Skeleton className="bg-gray-400 w-28 h-10 absolute top-[52%] left-[41%] rounded-full"/>
+        <Skeleton className="bg-gray-400 w-28 h-10 absolute lg:top-[52%] top-[75%] lg:left-[20%]  rounded-full"/>
+        <Skeleton className="bg-gray-400 w-28 h-10 absolute lg:top-[52%] top-[75%] left-[33%] rounded-full"/>
+        <Skeleton className="bg-gray-400 w-28 h-10 absolute lg:top-[52%] top-[75%] lg:left-[45%] left-[65%] rounded-full"/>
         </div>
           {[1, 2, 3].map((_, index) => (
             <motion.div 
@@ -217,9 +217,16 @@ export default function AllProducts({ }) {
                   <img src={product.image.url} alt={product.title} />
                   <h1>{product.title}</h1>
                   <h3>{product.description}</h3>
-                  <p className={style.Old}>Price: ${product.price}</p>
-                  <span>New Price</span>
-                  <h2>${product.discountedPrice}</h2>
+                  {product.discountedPrice && product.discountedPrice < product.price ? (
+    <>
+        <p className={style.Old}>Price: {product.price}</p>
+        <h1>New Price: {product.discountedPrice}</h1>
+    </>
+) : (
+    <h1>Price: {product.price}</h1>
+)}
+
+          
                   <div className={style.Button}>
                     <div>
                       <RoundedButton 

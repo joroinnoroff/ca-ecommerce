@@ -90,28 +90,27 @@
 }
 
 
+
+
 .Locate {
   display: flex;
+  flex-direction: row;
+
+
+  height: 50%;
   margin-top: 5rem;
+
+
   color: #fff;
   margin: auto;
   align-items: center;
   justify-content: center;
   width: 1000px;
-}
-
-.Locate {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* Adjust the space between columns */
-  align-items: stretch;
-  /* Stretch columns to equal height */
-  height: 100%;
-  margin-top: 5rem;
+  height: 50%;
 }
 
 .LocateCon {
+
   flex: 1;
   /* Each column takes equal space */
   display: flex;

@@ -54,7 +54,7 @@ function ProductDetails({ addItemToCart }) {
   const { title, description, price, discountedPrice, image, reviews, tags } = product.data;
 
   return (
-    <div>
+    <div className='h-screen w-full'>
         <Toaster closeButton position="top-center" />
 
 
@@ -65,14 +65,15 @@ function ProductDetails({ addItemToCart }) {
           <h1>{title}</h1>
           <p className={style.Description}>{description}</p>
           <small>Category: {tags}</small>
-          {discountedPrice ? (
-        <>
-          <p className={style.Old}>Price: {price}</p>
-          <h1>New Price: {discountedPrice}</h1>
-        </>
-      ) : (
-        <h1>Price: {price}</h1>
-      )}
+          {discountedPrice && discountedPrice < price ? (
+    <>
+        <p className={style.Old}>Price: {price}</p>
+        <h1>New Price: {discountedPrice}</h1>
+    </>
+) : (
+    <h1>Price: {price}</h1>
+)}
+
           <div>
             <RoundedButton backgroundColor="#fff" onClick={handleAddToCart} type="submit">
               <p>Add to cart</p>
@@ -81,7 +82,7 @@ function ProductDetails({ addItemToCart }) {
         </div>
       </div>
       <hr />
-      {/* Render ProductReviews component and pass reviews array as prop */}
+    
       <ProductReviews reviews={reviews} />
     </div>
   );

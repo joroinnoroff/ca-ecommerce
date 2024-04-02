@@ -4,7 +4,7 @@ import Globe from '../animations/Globe.json';
 import { motion, useAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import RoundedButton from '../Components/common/RoundedButton/RoundedButton';
-import { ArrowRight } from 'lucide-react';
+ 
 import style from './ContactStyle/style.module.css'
 import { toast } from 'sonner';
 function Contact() {
@@ -46,6 +46,12 @@ function Contact() {
     console.log('Email:', userEmail);
     console.log('Department:', selectedDepartment);
     console.log('Message:', userMessage);
+
+    setUserName('')
+    setUserEmail('')
+    setUserMessage('')
+
+    toast.success('Thank you for contacting us, we will respond as soon as possible')
 
     // You can perform further actions here, like sending the form data to a server
   };
