@@ -79,7 +79,7 @@ function Contact() {
     >
 
 <div className='flex flex-col items-center'>
-        <div className='flex flex-col items-center mb-20 absolute   z-9 p-10'>
+        <div className='flex flex-col items-center mb-20 '>
           <h1 className='text-[12vw] md:text-[8vw] mb-20'>Contact <span className='text-[#3A92DE]'>us</span> here</h1>
  
     <span className='text-sm md:text-lg text-gray-700' key="phrase2">
