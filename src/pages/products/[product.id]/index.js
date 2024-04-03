@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import style from './styles/style.module.css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import RoundedButton from '../../../Components/common/RoundedButton/RoundedButton';
 import ProductReviews from './components/ProductReviews/ProductReviews';  
 import Lottie from 'lottie-react'
 import Loading from '../../../animations/Loadingskeleton.json'
 import { toast, Toaster } from 'sonner';
-import { ArrowLeft } from 'lucide-react';
+ 
+ 
 function ProductDetails({ addItemToCart }) {
   const { id } = useParams();
+  
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -58,7 +61,7 @@ function ProductDetails({ addItemToCart }) {
         <Toaster closeButton position="top-center" />
 
 
-        <ArrowLeft/>
+     
       <div className={style.ProductContainer} key={id}>
         {image && image.url && <img src={image.url} alt={title} />}
         <div className={style.col2}>
@@ -68,10 +71,10 @@ function ProductDetails({ addItemToCart }) {
           {discountedPrice && discountedPrice < price ? (
     <>
         <p className={style.Old}>Price: {price}</p>
-        <h1>New Price: {discountedPrice}</h1>
+        <h1>New Price: ${discountedPrice}</h1>
     </>
 ) : (
-    <h1>Price: {price}</h1>
+    <h1>Price: ${price}</h1>
 )}
 
           <div>

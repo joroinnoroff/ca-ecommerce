@@ -26,7 +26,7 @@ function ShoppingCart({ cartItems, removeFromCart, addItemToCart }) {
 
   const totalPrice = cartItems.reduce((total, item) => {
     // If there's a discounted price, use that; otherwise, use regular price
-    const price = item.productData.discountPrice ? item.productData.discountPrice : item.productData.price;
+    const price = item.productData.discountedPrice ? item.productData.discountedPrice : item.productData.price;
     return total + price * item.quantity;
   }, 0).toFixed(2); // <-- Add toFixed(2) to round to 2 decimal places
 

@@ -95,10 +95,14 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails addItemToCart={(productId, productData) => addItemToCart(productId, productData)} cartItems={cartItems}/>} />
 
           <Route path="/CheckOut" element={<CheckOut         addItemToCart={addItemToCart}
-            removeFromCart={removeFromCartFunction} // Pass removeFromCartFunction as a prop
-            cartItems={cartItems} />} /> {/* Add route for ViewCart */}
+            removeFromCart={removeFromCartFunction}  
+            cartItems={cartItems} />} />  
 
-<Route path="/Complete" element={<Complete cartItems={cartItems}/>}   />
+<Route
+  path="/Complete"
+  element={<Complete cartItems={cartItems} setCartItems={setCartItems} />} // Make sure to include setCartItems within the element prop
+/>
+
           <Route path="*" element={<NotFound />} />
 
 

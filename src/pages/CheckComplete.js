@@ -13,6 +13,12 @@ function Complete({cartItems, setCartItems}) {
     setCartItems([]);
   }
  
+  const totalPrice = cartItems.reduce((total, item) => {
+    // If there's a discounted price, use that; otherwise, use regular price
+    const price = item.productData.discountedPrice ? item.productData.discountedPrice : item.productData.price;
+    return total + price * item.quantity;
+  }, 0).toFixed(2); // <-- Add toFixed(2) to round to 2 decimal places
+  
 
   return (
     <div className={style.Container}>
@@ -30,7 +36,7 @@ function Complete({cartItems, setCartItems}) {
       </div>
       <ul>
       
-        <span>Thank you for your purchase of  </span>
+        <h1>Thank you for your purchase of  </h1>
         {cartItems.map((item, index) => (
           <li key={index}>
             <span>{item.productData.title}</span>
@@ -51,6 +57,8 @@ function Complete({cartItems, setCartItems}) {
             )}
           </li>
         ))}
+
+        <span> Your Total is: {totalPrice}</span>
       </ul>
 
       

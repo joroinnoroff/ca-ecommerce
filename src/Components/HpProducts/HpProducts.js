@@ -115,10 +115,10 @@ export default function HpProducts() {
                   {product.discountedPrice && product.discountedPrice < product.price ? (
     <>
         <p className={style.Old}>Price: {product.price}</p>
-        <h1>New Price: {product.discountedPrice}</h1>
+        <h1>New Price: ${product.discountedPrice}</h1>
     </>
 ) : (
-    <h1>Price: {product.price}</h1>
+    <h1>Price: ${product.price}</h1>
 )}
                   <div className={style.Button}>
                     <div>

@@ -70,6 +70,14 @@ span {
   align-items: center;
   text-align: center;
   height: auto;
+  flex: 1;
+}
+
+.Products a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 
 
