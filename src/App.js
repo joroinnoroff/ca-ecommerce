@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import Preloader from '../src/Components/Preloader/index';
 import Nav from './Components/Nav';
 import ProductDetails from './pages/products/[product.id]';
-import ShoppingCart from './Components/Cart/ShoppingCart';
+ 
 import CheckOut from './pages/CheckOut'; // Import the ViewCart component
 import Contact from './pages/ContactUs';
 import Complete from './pages/CheckComplete';
@@ -44,7 +44,7 @@ function App() {
     const existingProductIndex = cartItems.findIndex((item) => item.productId === productId);
   
     if (existingProductIndex !== -1) {
-      // Product already exists in the cart, update quantity
+     
       const updatedCartItems = cartItems.map((item, index) => {
         if (index === existingProductIndex) {
           return { ...item, quantity: item.quantity + 1 };
@@ -53,7 +53,7 @@ function App() {
       });
       setCartItems(updatedCartItems);
     } else {
-      // Product doesn't exist in the cart, add it
+ 
       setCartItems([...cartItems, { productId, quantity: 1, productData }]);
     }
   };
@@ -66,10 +66,10 @@ function App() {
     const currentItem = newCartItems[index];
   
     if (currentItem.quantity === 1) {
-      // If the quantity is 1, remove the item from the cart entirely
+ 
       newCartItems.splice(index, 1);
     } else {
-      // If the quantity is more than 1, decrease the quantity by 1
+    
       newCartItems[index].quantity -= 1;
     }
   
@@ -98,10 +98,10 @@ function App() {
             removeFromCart={removeFromCartFunction}  
             cartItems={cartItems} />} />  
 
-<Route
-  path="/Complete"
-  element={<Complete cartItems={cartItems} setCartItems={setCartItems} />} // Make sure to include setCartItems within the element prop
-/>
+          <Route
+            path="/Complete"
+            element={<Complete cartItems={cartItems} setCartItems={setCartItems} />}
+          />
 
           <Route path="*" element={<NotFound />} />
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import style from './styles/style.module.css';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import RoundedButton from '../../../Components/common/RoundedButton/RoundedButton';
 import ProductReviews from './components/ProductReviews/ProductReviews';  
 import Lottie from 'lottie-react'
@@ -39,10 +39,10 @@ function ProductDetails({ addItemToCart }) {
 
   const handleAddToCart = () => {
     if (product && product.data) {
-      addItemToCart(id, product.data); // Add the product to the cart
-      toast.success('Item Added to Cart'); // Display success toast
+      addItemToCart(id, product.data); 
+      toast.success('Item Added to Cart'); 
     } else {
-      toast.error('Error adding item to cart'); // Display error toast
+      toast.error('Error adding item to cart');  
     }
   };
 

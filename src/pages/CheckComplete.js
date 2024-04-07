@@ -1,5 +1,5 @@
-import { MinusIcon, PlusIcon } from 'lucide-react';
-import React, { useState } from 'react';
+ 
+import React from 'react';
 import RoundedButton from '../Components/common/RoundedButton/RoundedButton';
 import style from './CheckOutStyle/style.module.css';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ function Complete({cartItems, setCartItems}) {
     // If there's a discounted price, use that; otherwise, use regular price
     const price = item.productData.discountedPrice ? item.productData.discountedPrice : item.productData.price;
     return total + price * item.quantity;
-  }, 0).toFixed(2); // <-- Add toFixed(2) to round to 2 decimal places
+  }, 0).toFixed(2); 
   
 
   return (

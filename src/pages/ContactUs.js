@@ -23,21 +23,31 @@ function Contact() {
     }));
   };
 
-  const handleInputChange = event => {
+
+  const handleInputChange = (event) => {
     const { name, value } = event.target;
     if (name === 'userName') setUserName(value);
-    if (name === 'userEmail') setUserEmail(value);
-    if (name === 'userMessage') setUserMessage(value);
+    else if (name === 'userEmail') setUserEmail(value);
+    else if (name === 'userMessage') setUserMessage(value);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Validate form fields
+    if (userName.length < 3 ) {
+      toast.error('Name must be more then 3 characters');
+      return;
+    }
+    if (userMessage.length < 3 ) {
+      toast.error('Message must be more then 3 characters');
+      return;
+    }
 
     // Validate email using regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(userEmail)) {
-      console.log('Invalid email');
-      toast.error("Please enter a valid email")
+      toast.error('Please enter a valid email');
       return;
     }
 
@@ -47,13 +57,12 @@ function Contact() {
     console.log('Department:', selectedDepartment);
     console.log('Message:', userMessage);
 
-    setUserName('')
-    setUserEmail('')
-    setUserMessage('')
+    // Reset form fields
+    setUserName('');
+    setUserEmail('');
+    setUserMessage('');
 
-    toast.success('Thank you for contacting us, we will respond as soon as possible')
-
-    // You can perform further actions here, like sending the form data to a server
+    toast.success('Thank you for contacting us, we will respond as soon as possible');
   };
   return (
     <div className=' w-full absolute '>
@@ -61,7 +70,7 @@ function Contact() {
       {!animationCompleted && (
         <Lottie
           animationData={Globe}
-          loop={false} // Set loop to false
+          loop={false} 
           width={20}
           height={20}
           style={{ height: '500px', width: 'auto', overflow: 'auto' }}
