@@ -58,7 +58,7 @@ function ProductDetails({ addItemToCart }) {
 
   return (
     <div className='h-screen w-full'>
-        <Toaster closeButton position="top-center" />
+        
 
 
      

@@ -25,8 +25,8 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  width: 50%;
-  /* Adjust this width as needed */
+  width: 55%;
+
   align-items: flex-start;
   position: absolute;
   right: 0%;
@@ -38,9 +38,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* Adjust alignment */
+
   width: 100%;
-  /* Make all list items take full width */
+
   gap: 5rem;
   border-bottom: 0.5px solid #fff;
   padding: 0.25rem;
@@ -112,13 +112,13 @@
 .LocateCon {
 
   flex: 1;
-  /* Each column takes equal space */
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* Center align text */
+
 }
 
 .LocateCon svg {
@@ -157,7 +157,7 @@
 
   .Container li {
     gap: 3rem;
-    padding: 4rem;
+    padding: 3rem;
   }
 
   .Container img {
