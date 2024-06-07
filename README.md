@@ -20,7 +20,7 @@ Installing
 
 
 **Clone the repo:**
-gh repo clone joroinnoroff/jo-semestertask2
+gh repo clone joroinnoroff/ca-ecommerce
 Install the dependencies:
 npm install
 
