@@ -5,19 +5,14 @@ import { motion, useAnimation } from 'framer-motion';
 import ShoppingCart from '../Cart/ShoppingCart';
 import { Link } from 'react-router-dom';
 import Search from '../SearchProducts/Search';
-const words = "NOROFF - ECOMMERCE";
 
 export default function Nav({ addItemToCart, cartItems, removeFromCart }) { 
+  const words = "NOROFF - ECOMMERCE";
   const [isLoading, setIsLoading] = useState(true);
   const controls = useAnimation();
-  const [products, setProducts] = useState([]); // State to hold products
+  const [products, setProducts] = useState([]);  
 
-  // Define handleItemClick function
-  const handleItemClick = (product) => {
-    // Navigate to product page
-    // You can use Link component to navigate to the product page
-    // The product id is used in the URL to uniquely identify the product
-  };
+ 
 
   useEffect(() => {
     const startAnimation = () => {
@@ -27,7 +22,7 @@ export default function Nav({ addItemToCart, cartItems, removeFromCart }) {
           opacity: 1,
           transition: { delay: i * 0.1 }
         }));
-      }, 2000); // Delay of 2 seconds
+      }, 2000); 
     };
 
     if (isLoading) {
@@ -35,7 +30,7 @@ export default function Nav({ addItemToCart, cartItems, removeFromCart }) {
     }
   }, [isLoading, controls]);
 
-  // Fetch products
+ 
   useEffect(() => {
     const fetchProducts = async () => {
       try {

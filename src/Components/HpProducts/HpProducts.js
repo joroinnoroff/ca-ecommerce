@@ -57,7 +57,7 @@ export default function HpProducts() {
 
   useEffect(() => {
     if (!loading) {
-      controls.start("visible"); // Start animation for both background and text
+      controls.start("visible");  
     }
   }, [loading, controls]);
   
@@ -65,7 +65,7 @@ export default function HpProducts() {
   return (
     <motion.div ref={containerRef} className={style.Container}>
       <div className={style.BackgroundAnimation}>
-        {/* Animate each letter of the word "Today's offers" individually */}
+ 
         {words.split('').map((letter, index) => (
           <motion.span
           key={index}

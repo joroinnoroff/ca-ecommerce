@@ -30,7 +30,7 @@ export default function Search({ products, onItemClick }) {
         className={style.SearchInput}
       />
       {inputValue && <SearchIcon />}
-      {/* Render filtered products */}
+
       {filteredProducts.length > 0 && (
         <div className={style.PreviewContainer}>
           {filteredProducts.map(product => (
