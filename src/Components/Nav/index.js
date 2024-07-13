@@ -44,7 +44,7 @@ export default function Nav({ addItemToCart, cartItems, removeFromCart }) {
           throw new Error('Failed to fetch products');
         }
         const data = await response.json();
-        console.log(data);
+      
         setProducts(data.data);
       } catch (error) {
         console.error('Error fetching products:', error);

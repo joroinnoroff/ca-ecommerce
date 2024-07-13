@@ -9,7 +9,7 @@ export default function FilterItems({ onTagSelect, onSearchQueryChange }) {
 
 
   const handleTagSelect = (tag) => {
-    console.log("Selected tag:", tag); // Log the selected tag
+
     onTagSelect(tag);
 
   };
